@@ -2,40 +2,7 @@
 
 This repository contains my personal dotfiles for a minimal, keyboard-driven Linux setup using i3, Neovim, and other lightweight tools.
 
-## Structure~/dotfiles master
-❯ tree -a -L 2
-.
-├── .git
-│   ├── branches
-│   ├── COMMIT_EDITMSG
-│   ├── config
-│   ├── description
-│   ├── HEAD
-│   ├── hooks
-│   ├── index
-│   ├── info
-│   ├── logs
-│   ├── objects
-│   └── refs
-├── .gitignore
-├── i3
-│   └── .config
-├── nvim
-│   └── .config
-├── picom
-│   └── .config
-├── polybar
-│   └── .config
-├── rofi
-│   └── .config
-├── touchcursor
-│   └── .config
-├── wezterm
-│   └── .config
-├── xremap
-│   └── .config
-└── zshrc
-    └── .zshrc
+## Structure
 ```
 .
 ├── i3/.config
@@ -80,4 +47,5 @@ This repository is open-source. Use at your own risk.
 
 ---
 Happy hacking! 🚀
+
 
