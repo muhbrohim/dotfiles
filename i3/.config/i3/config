@@ -28,7 +28,7 @@ exec_always --no-startup-id xremap ~/.config/xremap/config.yml
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wp1.jpg
+exec_always --no-startup-id feh --bg-fill ~/downloads/pictures/wp1.jpg
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
