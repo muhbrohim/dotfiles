@@ -1,0 +1,4 @@
+keymap:
+  - name: "CapsLock to Escape"
+    remap:
+      CapsLock: Esc
