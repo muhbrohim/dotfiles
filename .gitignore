@@ -1,2 +1,10 @@
+
+## Other Repo
 nvim/.config/nvim/
 polybar/.config/polybar/themes/
+
+
+## Zebar
+/tmp*
+tmp*
+
