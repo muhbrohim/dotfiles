@@ -1,0 +1,9 @@
+[2m2025-03-12T08:38:11.579544Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 411 column 30, while parsing a block mapping at line 410 column 5
+[2m2025-03-12T08:47:20.441387Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 411 column 30, while parsing a block mapping at line 410 column 5
+[2m2025-03-13T14:51:20.358065Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[16].commands: unrecognized subcommand
+ at line 279 column 15
+[2m2025-03-13T14:51:23.374466Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[16].commands: unrecognized subcommand
+ at line 279 column 15
+[2m2025-03-13T14:52:06.459433Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[16].commands: unrecognized subcommand
+ at line 279 column 15
+[2m2025-03-14T06:22:14.820682Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
