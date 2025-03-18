@@ -15,7 +15,17 @@ if (Test-Path "$HOME\.config\wezterm") { Remove-Item "$HOME\.config\wezterm" -Fo
 
 
 
-### Zebar & Glazewm
+## NVIM
+# Create the symlink
+New-Item -ItemType SymbolicLink `
+         -Path "$env:LOCALAPPDATA\nvim" `
+         -Target "C:\Users\Think\dotfiles\windows\nvim"
+
+
+New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\nvim" -Target "C:\Users\Think\dotfiles\windows\nvim"         
+
+
+## Zebar & Glazewm
 
 Remove-Item "$HOME\.glzr\glazewm" -Recurse -Force; New-Item -ItemType SymbolicLink -Path "$HOME\.glzr\glazewm" -Target "$HOME\dotfiles\windows\glazewm"
 
