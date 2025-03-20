@@ -47,6 +47,37 @@ function oc-login() {
   fi
 }
 
+
+oc-exec() {
+  local app_name="$1"
+
+  if [ -z "$app_name" ]; then
+    echo "Usage: oc-exec <app_name>"
+    return 1
+  fi
+
+  # Get current namespace from `oc project`
+  local namespace
+  namespace=$(oc project -q 2>/dev/null)
+
+  if [ $? -ne 0 ]; then
+    echo "Failed to get current namespace. Are you logged in to OpenShift?"
+    return 1
+  fi
+
+  # Get pod name based on app label and namespace
+  local pod_name
+  pod_name=$(oc get pod -l app="$app_name" -n "$namespace" -o jsonpath='{.items[0].metadata.name}')
+
+  if [ -z "$pod_name" ]; then
+    echo "No pod found for app='$app_name' in namespace='$namespace'"
+    return 1
+  fi
+
+  # Execute shell inside the pod
+  oc exec -it "$pod_name" -n "$namespace" -- /bin/sh
+}
+
 # ==============================================================================
 # ZSH Plugins & Configuration
 # ==============================================================================
@@ -109,5 +140,3 @@ alias lk='exa -lah --icons --group-directories-first --git'
 alias ll='exa -l --icons --group-directories-first --git'
 alias bat='batcat'
 alias cls='clear'
-
-
