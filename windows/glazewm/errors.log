@@ -7,3 +7,15 @@
 [2m2025-03-13T14:52:06.459433Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[16].commands: unrecognized subcommand
  at line 279 column 15
 [2m2025-03-14T06:22:14.820682Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
+[2m2025-03-19T04:37:38.141455Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:30.181974Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:31.246242Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:32.313507Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:33.627938Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:35.379802Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:36.972354Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-19T04:38:37.545144Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-20T07:30:51.241957Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-20T07:30:55.641614Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-20T07:30:57.188937Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-03-20T07:30:58.138876Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
