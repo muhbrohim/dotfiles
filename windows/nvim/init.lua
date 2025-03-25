@@ -1032,3 +1032,15 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- ╭──────────────────────────────────────────────╮
+-- │ Custom Commands                              │
+-- ╰──────────────────────────────────────────────╯
+
+vim.api.nvim_create_user_command('RemoveSpace', function()
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  for i, line in ipairs(lines) do
+    lines[i] = line:gsub('&nbsp;', ' ')
+  end
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+end, { desc = 'Replace &nbsp; with space in current buffer' })
