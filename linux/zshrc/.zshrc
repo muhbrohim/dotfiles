@@ -291,6 +291,7 @@ unalias ll
 
 #alias lk='exa -lah'
 alias v='nvim' vi='nvim' vim='nvim'
+alias ls=lk
 alias lk='exa -lah --icons --group-directories-first --git'
 alias ll='exa -l --icons --group-directories-first --git'
 alias bat='batcat'
