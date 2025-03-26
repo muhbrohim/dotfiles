@@ -951,7 +951,7 @@ require('lazy').setup({
 -- │ Custom Commands                              │
 -- ╰──────────────────────────────────────────────╯
 
-vim.api.nvim_create_user_command('RemoveSpace', function()
+vim.api.nvim_create_user_command('Space', function()
   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
   for i, line in ipairs(lines) do
     lines[i] = line:gsub('&nbsp;', ' ')
