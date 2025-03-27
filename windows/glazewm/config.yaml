@@ -133,7 +133,7 @@ workspaces:
   - name: '0'
 # ibrahim - symbol 
   - name: '-'
-  - name: 'Edge'  
+  - name: 'VPN'  
   - name: 'WA'
   - name: 'Teams'
   - name: 'Firefox'  
@@ -314,7 +314,7 @@ keybindings:
     bindings: ['alt+0']    
   - commands: ['focus --workspace -']
     bindings: ['alt+-']    
-  - commands: ['focus --workspace Edge']
+  - commands: ['focus --workspace VPN']
     bindings: ['alt+=']            
   - commands: ['focus --workspace WA']
     bindings: ['alt+[']    
