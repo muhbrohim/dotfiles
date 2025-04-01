@@ -127,48 +127,6 @@ local custom_keys = {
 	},
 }
 
--- Enter Copy Mode (Ctrl+Shift+c)
-table.insert(config.keys, {
-	key = "c",
-	mods = "CTRL|SHIFT",
-	action = wezterm.action.ActivateCopyMode,
-})
-
--- Vim-like Copy Mode Keybindings
-config.copy_mode = {
-	key_bindings = {
-		{ key = "q", mods = "CTRL", action = wezterm.action.CopyMode("SetSelectionModeBlock") },
-		{ key = "h", mods = "NONE", action = wezterm.action.CopyMode("MoveLeft") },
-		{ key = "l", mods = "NONE", action = wezterm.action.CopyMode("MoveRight") },
-		{ key = "j", mods = "NONE", action = wezterm.action.CopyMode("MoveDown") },
-		{ key = "k", mods = "NONE", action = wezterm.action.CopyMode("MoveUp") },
-
-		{ key = "w", mods = "NONE", action = wezterm.action.CopyMode("MoveForwardWord") },
-		{ key = "b", mods = "NONE", action = wezterm.action.CopyMode("MoveBackwardWord") },
-
-		-- Vim-like character jumps
-		{ key = "f", mods = "NONE", action = wezterm.action.CopyMode("JumpForward") },
-		{ key = "F", mods = "NONE", action = wezterm.action.CopyMode("JumpBackward") },
-		{ key = "t", mods = "NONE", action = wezterm.action.CopyMode("JumpForwardTill") },
-		{ key = "T", mods = "NONE", action = wezterm.action.CopyMode("JumpBackwardTill") },
-
-		{ key = "v", mods = "NONE", action = wezterm.action.CopyMode("SetSelectionModeCell") },
-
-		{
-			key = "y",
-			mods = "NONE",
-			action = wezterm.action.Multiple({
-				wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
-				wezterm.action.ClearSelection,
-				wezterm.action.CopyMode("Close"),
-			}),
-		},
-
-		--		{ key = "q", mods = "NONE", action = wezterm.action.CopyMode("Close") },
-		{ key = "Escape", mods = "NONE", action = wezterm.action.CopyMode("Close") },
-	},
-}
-
 -- Merge Custom Keys
 for _, key in ipairs(custom_keys) do
 	table.insert(config.keys, key)

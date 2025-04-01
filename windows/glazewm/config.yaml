@@ -132,7 +132,7 @@ workspaces:
   - name: '9'
   - name: '0'
 # ibrahim - symbol 
-  - name: '-'
+  - name: 'Email'
   - name: 'VPN'  
   - name: 'WA'
   - name: 'Teams'
@@ -187,6 +187,7 @@ binding_modes:
       # Press enter/escape to return to default keybindings.
       - commands: ['wm-disable-binding-mode --name resize']
         bindings: ['escape', 'enter']
+      # Restart
       - commands: ["wm-reload-config"]
         bindings: ["alt+shift+c"]        
 
@@ -312,7 +313,7 @@ keybindings:
   # symbol
   - commands: ['focus --workspace 0']
     bindings: ['alt+0']    
-  - commands: ['focus --workspace -']
+  - commands: ['focus --workspace Email']
     bindings: ['alt+-']    
   - commands: ['focus --workspace VPN']
     bindings: ['alt+=']            
@@ -379,10 +380,10 @@ keybindings:
 
 # ibrahim 
 # conflict with windows terminal
-  # - commands: ['move --workspace -', 'focus --workspace -']
-  #   bindings: ['alt+shift+-']
-  # - commands: ['move --workspace =', 'focus --workspace =']
-  #   bindings: ['alt+shift+=']        
+  - commands: ['move --workspace Email', 'focus --workspace Email']
+    bindings: ['alt+shift+-']
+  - commands: ['move --workspace VPN', 'focus --workspace VPN']
+    bindings: ['alt+shift+=']        
 
 # conflict with windows terminal
   - commands: ['move --workspace WA', 'focus --workspace WA']
