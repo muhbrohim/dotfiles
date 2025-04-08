@@ -1,4 +1,6 @@
 
+errors.log
+
 # Ignore all .log files
 *.log
 
@@ -14,4 +16,4 @@ tmp*
 ## Other Repo
 nvim/.config/nvim/
 polybar/.config/polybar/themes/
-
+windows/glazewm/errors.log
