@@ -132,11 +132,11 @@ workspaces:
   - name: '9'
   - name: '0'
 # ibrahim - symbol 
+  - name: '11'
+  - name: '12'  
+  - name: 'WA'
   - name: 'Email'
   - name: 'VPN'  
-  - name: 'WA'
-  - name: 'Teams'
-  - name: 'Firefox'  
 # ibrahim - letter
   - name: 'Q'
   - name: 'W'
@@ -313,15 +313,15 @@ keybindings:
   # symbol
   - commands: ['focus --workspace 0']
     bindings: ['alt+0']    
-  - commands: ['focus --workspace Email']
+  - commands: ['focus --workspace 11']
     bindings: ['alt+-']    
-  - commands: ['focus --workspace VPN']
+  - commands: ['focus --workspace 12']
     bindings: ['alt+=']            
   - commands: ['focus --workspace WA']
     bindings: ['alt+[']    
-  - commands: ['focus --workspace Teams']
+  - commands: ['focus --workspace Email']
     bindings: ['alt+]']    
-  - commands: ['focus --workspace Firefox']
+  - commands: ['focus --workspace VPN']
     bindings: ['alt+\']            
   # letter-based
   - commands: ['focus --workspace Q']
@@ -380,17 +380,17 @@ keybindings:
 
 # ibrahim 
 # conflict with windows terminal
-  - commands: ['move --workspace Email', 'focus --workspace Email']
+  - commands: ['move --workspace 11', 'focus --workspace 11']
     bindings: ['alt+shift+-']
-  - commands: ['move --workspace VPN', 'focus --workspace VPN']
+  - commands: ['move --workspace 12', 'focus --workspace 12']
     bindings: ['alt+shift+=']        
 
 # conflict with windows terminal
   - commands: ['move --workspace WA', 'focus --workspace WA']
     bindings: ['alt+shift+[']
-  - commands: ['move --workspace Teams', 'focus --workspace Teams']
+  - commands: ['move --workspace Email', 'focus --workspace Email']
     bindings: ['alt+shift+]']
-  - commands: ['move --workspace Firefox', 'focus --workspace Firefox']
+  - commands: ['move --workspace VPN', 'focus --workspace VPN']
     bindings: ['alt+shift+\']        
 # Move to Quick Workspaces
   - commands: ['move --workspace Q', 'focus --workspace Q']
