@@ -32,6 +32,15 @@ alias ping-oc-drc-sumut="ping 192.168.70.98"
 alias ping-dev-sumut="ping 192.168.40.20"
 alias ping-dc-sumut="ping 192.168.50.18"
 
+# SSH (SUMUT)
+alias ssh-teller-dev='sshpass -p "r00?R00t" ssh teller@192.168.40.20'
+alias ssh-teller-prod='sshpass -p "r00?R00t" ssh teller@192.168.50.18'
+alias ssh-teller-drc='sshpass -p "r00?R00t" ssh teller@192.168.70.22'
+alias ssh-bastion='sshpass -p "H1sx@mlpt!" ssh root@192.168.90.10'
+alias ssh-nfs='sshpass -p "H1sx@mlpt!" ssh root@192.168.90.11'
+alias ssh-lb='sshpass -p "H1sx@mlpt!" ssh root@192.168.90.23'
+alias ssh-137='sshpass -p "vlink1!" ssh baim@10.10.62.137'
+
 # ==============================================================================
 # Functions
 # ==============================================================================
