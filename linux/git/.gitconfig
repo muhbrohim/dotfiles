@@ -1,0 +1,36 @@
+[user]
+	email = brohimx@gmail.com
+	name = brohim
+
+[credential]
+	helper = store
+
+[core]
+	autocrlf = input
+	pager = delta
+
+[push]
+	autoSetupRemote = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = side-by-side line-numbers decorations
+	syntax-theme = Monokai Extended
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	whitespace-error-style = 22 reverse
+	navigate = true
+	line-numbers = true
+	side-by-side = true
+	decorations = true
+	width = 250
+	# If you use a dark terminal, make sure to enable true color
+	true-color = always
+	wrap-max-lines = 1
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default

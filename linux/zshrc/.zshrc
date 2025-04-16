@@ -12,6 +12,7 @@ export EDITOR="vim"
 export KUBE_EDITOR="vim"
 export AWS_CLI_AUTO_PROMPT="on-partial"
 export PATH="/usr/local/bin:$HOME/bin:$HOME/.krew/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export KUBECONFIG="$HOME/.kube/config"
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
@@ -85,6 +86,16 @@ oc-exec() {
 
   # Execute shell inside the pod
   oc exec -it "$pod_name" -n "$namespace" -- /bin/sh
+}
+
+
+# Usage: oc-rsh <app_name>
+# Opens an interactive shell into the first running pod with label app=<app_name>
+oc-rsh() {
+  [ -z "$1" ] && echo "Usage: oc-rsh <app_name>" && return 1
+  pod=$(oc get pod -l app="$1" -o jsonpath='{.items[?(@.status.phase=="Running")].metadata.name}' | awk '{print $1}')
+  [ -z "$pod" ] && echo "❌ No running pod found for app='$1'" && return 1
+  oc rsh "$pod"
 }
 
 # Bitbucket pipeline watch
