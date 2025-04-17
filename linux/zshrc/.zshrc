@@ -316,3 +316,7 @@ alias lk='exa -lah --icons --group-directories-first --git'
 alias ll='exa -l --icons --group-directories-first --git'
 alias bat='batcat'
 alias cls='clear'
+
+alias gitlog='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>"'
+alias gitlog1='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%C(reset)%C(yellow)%d%C(reset) %s%n%C(dim white)(%cr) %C(bold blue)<%an>%C(reset)"'
+

@@ -29,6 +29,9 @@
 	# If you use a dark terminal, make sure to enable true color
 	true-color = always
 	wrap-max-lines = 1
+	# line-numbers = true
+	# navigate = true
+	# pager = less -FRX --RAW-CONTROL-CHARS
 [merge]
 	conflictstyle = diff3
 
