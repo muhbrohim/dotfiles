@@ -17,3 +17,4 @@ tmp*
 nvim/.config/nvim/
 polybar/.config/polybar/themes/
 windows/glazewm/errors.log
+windows/glazewm/errors.log

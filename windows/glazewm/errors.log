@@ -37,3 +37,6 @@
 [2m2025-04-01T09:07:48.372913Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
 [2m2025-04-01T09:07:49.791369Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
 [2m2025-04-05T05:07:29.822316Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2025-04-08T21:26:45.858869Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
+[2m2025-04-09T06:32:58.358763Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
+[2m2025-04-11T15:35:38.940899Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
