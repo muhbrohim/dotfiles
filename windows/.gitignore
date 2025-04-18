@@ -1,0 +1,21 @@
+
+errors.log
+
+# Ignore all .log files
+*.log
+
+# ignore specific logging directories
+logs/
+log/
+logging/
+
+## Zebar
+/tmp*
+tmp*
+
+## Other Repo
+glazewm/errors.log
+nvim/.config/nvim/
+polybar/.config/polybar/themes/
+windows/glazewm/errors.log
+windows/glazewm/errors.log
