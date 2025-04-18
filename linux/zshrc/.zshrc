@@ -275,7 +275,6 @@ source <(oc completion zsh)
 
 # Fast directory switching
 eval "$(zoxide init zsh)"
-alias cd="z"
 
 # Load extra configuration if available
 [[ -f "$HOME/.zsh/envs.zsh" ]] && source "$HOME/.zsh/envs.zsh"
@@ -346,6 +345,7 @@ export UPDATE_ZSH_DAYS=7
 # Aliases
 # ==============================================================================
 unalias ll 
+# unalias cd 
 
 #alias lk='exa -lah'
 alias v='nvim' vi='nvim' vim='nvim'
