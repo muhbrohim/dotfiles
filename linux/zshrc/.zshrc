@@ -16,6 +16,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export KUBECONFIG="$HOME/.kube/config"
 export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 # ==============================================================================
 # History Configuration
 # ==============================================================================
@@ -274,6 +275,7 @@ source <(oc completion zsh)
 
 # Fast directory switching
 eval "$(zoxide init zsh)"
+alias cd="z"
 
 # Load extra configuration if available
 [[ -f "$HOME/.zsh/envs.zsh" ]] && source "$HOME/.zsh/envs.zsh"
@@ -284,8 +286,43 @@ eval "$(zoxide init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Fuzzy Finder (fzf)
-[[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
-# eval "$(fzf --zsh)"
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
+eval "$(fzf --zsh)"
+alias f='fzf'
+alias fh='fc -rl 1 | fzf'
+
+# -- Use fd instead of fzf --
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+
+# --- setup fzf theme ---
+fg="#CBE0F0"
+bg="#011628"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
 
 # Homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -315,9 +352,11 @@ alias v='nvim' vi='nvim' vim='nvim'
 alias ls=lk
 alias lk='exa -lah --icons --group-directories-first --git'
 alias ll='exa -l --icons --group-directories-first --git'
+alias l3="exa --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias bat='batcat'
 alias cls='clear'
 
 alias gitlog='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>"'
 alias gitlog1='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%C(reset)%C(yellow)%d%C(reset) %s%n%C(dim white)(%cr) %C(bold blue)<%an>%C(reset)"'
+
 
