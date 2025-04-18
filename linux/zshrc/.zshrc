@@ -22,7 +22,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 # ==============================================================================
 ZSH_THEME="powerlevel10k/powerlevel10k"
 export HISTTIMEFORMAT="[%F %T] "
-
+export EDITOR=nvim
 
 # IntelliJ IDEA on WSL2
 alias idea='"/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2024.1/bin/idea64.exe"'
@@ -359,4 +359,11 @@ alias cls='clear'
 alias gitlog='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>"'
 alias gitlog1='git log --graph --abbrev-commit --decorate --date=relative --all --pretty=format:"%C(auto)%h%C(reset)%C(yellow)%d%C(reset) %s%n%C(dim white)(%cr) %C(bold blue)<%an>%C(reset)"'
 
-
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
