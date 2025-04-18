@@ -285,6 +285,7 @@ eval "$(zoxide init zsh)"
 
 # Fuzzy Finder (fzf)
 [[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
+# eval "$(fzf --zsh)"
 
 # Homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
